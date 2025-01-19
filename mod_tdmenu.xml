@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade" >
+	<name>tdmenu</name>
+	<author>KWProductions121 Co.</author>
+	<creationDate>2025-Jan</creationDate>
+	<copyright>Copyright (C) 2016 - 2024</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>webarchitect@kwprodtuctions121.ir</authorEmail>
+	<authorUrl>http://www.extensions.kwproductions121.ir</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[Tdmenu is ready to be used!<br />
+	<a href="https://www.kwproductions121.ir" ><img src="/modules/mod_tdmenu/logokw-productions.gif"  /></a>
+	]]>
+	</description>
+	<namespace path="src">Joomla\Module\Tdmenu</namespace>
+	
+<languages folder="language">
+<language tag="en-GB">en-GB/en-GB.mod_tdmenu.ini</language>
+<language tag="en-GB">en-GB/en-GB.mod_tdmenu.sys.ini</language>
+</languages>
+
+<updateservers>
+		<server type="collection" name="mod_tdmenu"><![CDATA[https://www.extensions.kwproductions121.ir/myextensions.xml]]></server>
+</updateservers>
+
+	
+	<files>
+		<folder module="mod_tdmenu">services</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+		<file>logokw-productions.gif</file>
+	</files>
+	
+	
+	<config>
+		<fields name="params">
+			<fieldset name="Tdmenu">
+			  	<field name="modulename" type="text"  default="tdmenu" readonly="true" />
+				<field name="moduleclass_sfx" type="text"  label="Module Class Suffix" required="true" />
+				<field name="joomlamenumoduleclass" type="text" default="mod-menu"  label="The Class For Module Menu of Joomla(The joomla menu module is to be at the same page with your tdmenu module but with display=none.)" />
+
+
+
+				<field name="menu" type="menu" default="mainmenu" label="MOD_TDMENU_NAME_LABEL"  />
+					
+				<field name="menuorientation" type="radio" class="btn-group" default="1" label="MOD_TDMENU_DIRECTION_LABLE" description="MOD_TDMENU_DIRECTION_DESC">
+					
+					<option value="inline-block">Horizontal</option>
+					<option value="block">Vertical</option>
+
+				</field>
+			    
+				
+					<field
+					name="menubordercolor"
+					type="color"
+					label="Border Color"
+					default="#ffffff"
+					
+					/>
+					
+					
+						<field
+					name="menuborderradius"
+					type="int"
+					label="Menu Border Radius"
+					default="0"
+					
+					/>
+					
+						<field
+					name="menuitempadding"
+					type="int"
+					label="Item Paddings"
+					default="5"
+					
+					/>
+					
+						<field
+					name="menubordersize"
+					type="int"
+					label="Border Size"
+					default="5"
+					
+					/>
+					
+					
+					<field
+					name="menubackcolor"
+					type="color"
+					label="Menu Back Color"
+					default="#ffffff"
+					
+					/>
+					
+					<field
+					name="menucolor"
+					type="color"
+					label="Menu Color"
+					default="#000000"
+					
+					/>
+					
+					<field
+					name="menushadowcolor"
+					type="color"
+					label="Menu Shadow Color"
+					default="#cccccc"
+					
+					/>
+					
+					<field name="menuimage" type="media"  />
+					
+					<field name="menucolumnwidth" type="text" size="10" default="200" label="Column Width"  />
+					
+					<!--<field name="layoutlevel" type="text" size="10"  placeholder="3:200, 4:151, 2:121" label="Input the level and width for sbumenus to be vertical or horizontal "  />-->
+
+					
+					<field name="menutextalign" type="radio" class="btn-group" default="center" label="Menu Text Align" description="MOD_TDMENU_MENU_TEXTALIGN_DESC">
+					
+					<option value="left">Left</option>
+					<option value="center">Center</option>
+					<option value="right">Right</option>
+
+
+				   </field>
+                    	<field name="submenutextalign" type="radio" class="btn-group" default="left" label="Submenu Text Align" description="MOD_TDMENU_SUBMENU_TEXTALIGN_DESC">
+					
+					<option value="left">Left</option>
+					<option value="center">Center</option>
+					<option value="right">Right</option>
+
+
+				   </field>
+				   	<field name="typoweight" type="checkbox"  value="bold" label="Font Weight" description="MOD_TDMENU_FONTWEIGHT_DESC" />
+					<field name="typostyle" type="checkbox"  value="italic" label="Font Style" description="MOD_TDMENU_FONTSTYLE_DESC" />
+
+					
+					
+
+					<field name="animationin" type="groupedlist" label="Animation In" default="fadeInUp">
+					
+					<option value="0">JNONE</option>
+
+					<group label="Back Entrances">
+						<option value="backInDown">backInDown</option>
+						<option value="backInLeft">backInLeft</option>
+						<option value="backInRight">backInRight</option>
+						<option value="backInUp">backInUp</option>
+					</group>
+
+					<group label="Bouncing Entrances">
+						<option value="bounceIn">bounceIn</option>
+						<option value="bounceInDown">bounceInDown</option>
+						<option value="bounceInLeft">bounceInLeft</option>
+						<option value="bounceInRight">bounceInRight</option>
+						<option value="bounceInUp">bounceInUp</option>
+					</group>
+			
+					<group label="Fading Entrances">
+						<option value="fadeIn">fadeIn</option>
+						<option value="fadeInDown">fadeInDown</option>
+						<option value="fadeInDownBig">fadeInDownBig</option>
+						<option value="fadeInLeft">fadeInLeft</option>
+						<option value="fadeInLeftBig">fadeInLeftBig</option>
+						<option value="fadeInRight">fadeInRight</option>
+						<option value="fadeInRightBig">fadeInRightBig</option>
+						<option value="fadeInUp">fadeInUp</option>
+						<option value="fadeInUpBig">fadeInUpBig</option>
+						<option value="fadeInTopLeft">fadeInTopLeft</option>
+						<option value="fadeInTopRight">fadeInTopRight</option>
+						<option value="fadeInBottomLeft">fadeInBottomLeft</option>
+						<option value="fadeInBottomRight">fadeInBottomRight</option>
+					</group>
+			
+					<group label="Flippers">
+						<option value="flipInX">flipInX</option>
+						<option value="flipInY">flipInY</option>
+					</group>
+						
+					<group label="Rotating Entrances">
+						<option value="rotateIn">rotateIn</option>
+						<option value="rotateInDownLeft">rotateInDownLeft</option>
+						<option value="rotateInDownRight">rotateInDownRight</option>
+						<option value="rotateInUpLeft">rotateInUpLeft</option>
+						<option value="rotateInUpRight">rotateInUpRight</option>
+					</group>
+			
+					<group label="Sliders">
+						<option value="slideInLeft">slideInLeft</option>
+						<option value="slideInRight">slideInRight</option>
+						<option value="slideInDown">slideInDown</option>
+						<option value="slideInUp">slideInUp</option>
+					</group>
+					
+					<group label="Zooming Entrances">
+						<option value="zoomIn">zoomIn</option>
+						<option value="zoomInDown">zoomInDown</option>
+						<option value="zoomInLeft">zoomInLeft</option>
+						<option value="zoomInRight">zoomInRight</option>
+						<option value="zoomInUp">zoomInUp</option>
+						<!-- extra anim -->
+						<option value="zoomInX">zoomInX</option>
+						<option value="zoomInY">zoomInY</option>
+					</group>
+					
+					<group label="Specials">
+						<option value="rollIn">rollIn</option>
+						<option value="lightSpeedInRight">lightSpeedInRight</option>
+						<option value="lightSpeedInLeft">lightSpeedInLeft</option>
+					</group>
+
+				</field>
+				
+				<field name="animationout" type="groupedlist" label="Animation Out" default="zoomOut" >
+					
+					<option value="0">JNONE</option>
+
+					<group label="Back Exits">
+						<option value="backOutDown">backOutDown</option>
+						<option value="backOutLeft">backOutLeft</option>
+						<option value="backOutRight">backOutRight</option>
+						<option value="backOutUp">backOutUp</option>
+					</group>
+
+					<group label="Bouncing Exits">
+						<option value="bounceOut">bounceOut</option>
+						<option value="bounceOutDown">bounceOutDown</option>
+						<option value="bounceOutLeft">bounceOutLeft</option>
+						<option value="bounceOutRight">bounceOutRight</option>
+						<option value="bounceOutUp">bounceOutUp</option>
+					</group>
+			
+					<group label="Fading Exits">
+						<option value="fadeOut">fadeOut</option>
+						<option value="fadeOutDown">fadeOutDown</option>
+						<option value="fadeOutDownBig">fadeOutDownBig</option>
+						<option value="fadeOutLeft">fadeOutLeft</option>
+						<option value="fadeOutLeftBig">fadeOutLeftBig</option>
+						<option value="fadeOutRight">fadeOutRight</option>
+						<option value="fadeOutRightBig">fadeOutRightBig</option>
+						<option value="fadeOutUp">fadeOutUp</option>
+						<option value="fadeOutUpBig">fadeOutUpBig</option>
+						<option value="fadeOutTopLeft">fadeOutTopLeft</option>
+						<option value="fadeOutTopRight">fadeOutTopRight</option>
+						<option value="fadeOutBottomRight">fadeOutBottomRight</option>
+						<option value="fadeOutBottomLeft">fadeOutBottomLeft</option>
+					</group>
+			
+					<group label="Flippers">
+						<option value="flipOutX">flipOutX</option>
+						<option value="flipOutY">flipOutY</option>
+					</group>
+						
+					<group label="Rotating Exits">
+						<option value="rotateOut">rotateOut</option>
+						<option value="rotateOutDownLeft">rotateOutDownLeft</option>
+						<option value="rotateOutDownRight">rotateOutDownRight</option>
+						<option value="rotateOutUpLeft">rotateOutUpLeft</option>
+						<option value="rotateOutUpRight">rotateOutUpRight</option>
+					</group>
+			
+					<group label="Sliders">
+						<option value="slideOutLeft">slideOutLeft</option>
+						<option value="slideOutRight">slideOutRight</option>
+						<option value="slideOutUp">slideOutUp</option>
+						<option value="slideOutDown">slideOutDown</option>
+					</group>
+					
+					<group label="Zooming Exits">
+						<option value="zoomOut">zoomOut</option>
+						<option value="zoomOutDown">zoomOutDown</option>
+						<option value="zoomOutLeft">zoomOutLeft</option>
+						<option value="zoomOutRight">zoomOutRight</option>
+						<option value="zoomOutUp">zoomOutUp</option>
+						<!-- extra anim 
+						<option value="zoomOutX">zoomOutX</option>
+						<option value="zoomOutY">zoomOutY</option>
+						-->
+					</group>
+					
+					<group label="Specials">
+						<option value="rollOut">rollOut</option>
+						<option value="lightSpeedOutRight">lightSpeedOutRight</option>
+						<option value="lightSpeedOutLeft">lightSpeedOutLeft</option>
+					</group>
+
+				</field>
+				
+						<field name="animationspeed" type="list" label="Animation Speed" default="600">
+					<option value="400">Fast</option>
+					<option value="600">Perpendicular</option>
+					<option value="800">Slow</option>
+				</field>
+			
+				<field name="fixed" type="radio" class="btn-group" default="relative" label="Fixed" description="" >
+					<option value="fixed">Yes</option>
+					<option value="relative">No</option>
+				</field>
+				<field name="fixedoffsetleft" type="text" default="0" label="Fixed Offset Left" description="MOD_TDMENU_FIXED_OFFSETLEFT_DESC"  />
+				<field name="fixedoffsettop" type="text" default="0" label="Fixed Offset Top" description="MOD_TDMENU_FIXED_OFFSETTOP_DESC"  />
+
+				<field
+					name="menuleft"
+					type="int"
+					label="Menuleft"
+					default="0"
+					
+					/>
+						<field
+					name="menutop"
+					type="int"
+					label="Menutop"
+					default="0"
+					
+					/>
+					
+					<field
+					name="submenuleft"
+					type="int"
+					label="SubMenu-left"
+					default="10"
+					
+					/>
+						<field
+					name="submenutop"
+					type="int"
+					label="SubMenu-top"
+					default="15"
+					
+					/>
+					
+					<field
+					name="buttonbackcolor"
+					type="color"
+					label="Button Back Color(For Responsive)"
+					default="#ffffff"
+					
+					/>
+						<field
+					name="buttoncolor"
+					type="color"
+					label="Button Color(For Responsive)"
+					default="#000000"
+					
+					/>
+					
+				
+				
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
